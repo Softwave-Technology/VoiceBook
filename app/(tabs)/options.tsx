@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: 'NunitoBlackItalic',
     color: Colors.textPrimary,
     borderBottomColor: 'gainsboro',
     borderBottomWidth: 1,

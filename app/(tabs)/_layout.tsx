@@ -1,10 +1,28 @@
 import { Tabs } from 'expo-router';
 
 import { TabBarIcon } from '../../components/TabBarIcon';
-import { Pressable } from 'react-native';
+import { ActivityIndicator, Pressable, View } from 'react-native';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import fonts from '~/constants/fonts';
+import { useFonts } from 'expo-font';
 
 export default function TabLayout() {
+  const [fontsLoaded] = useFonts(fonts);
+
+  if (!fontsLoaded) {
+    return (
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'beige',
+        }}>
+        <ActivityIndicator size={'large'} />
+      </View>
+    );
+  }
+
   return (
     <Tabs
       screenOptions={{
