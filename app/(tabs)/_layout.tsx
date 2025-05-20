@@ -1,10 +1,17 @@
 import { Tabs } from 'expo-router';
 
 import { TabBarIcon } from '../../components/TabBarIcon';
-import { ActivityIndicator, Pressable, View } from 'react-native';
+import { ActivityIndicator, GestureResponderEvent, Pressable, View } from 'react-native';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import fonts from '~/constants/fonts';
 import { useFonts } from 'expo-font';
+
+type TabBarButtonProps = {
+  accessibilityLabel?: string;
+  accessibilityState?: { selected?: boolean };
+  onPress?: (event: GestureResponderEvent) => void;
+  testID?: string;
+};
 
 export default function TabLayout() {
   const [fontsLoaded] = useFonts(fonts);
@@ -43,7 +50,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="new"
         options={{
-          tabBarButton: (props) => (
+          tabBarButton: (props: TabBarButtonProps) => (
             <Pressable
               {...props}
               style={{
