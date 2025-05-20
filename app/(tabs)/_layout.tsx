@@ -29,20 +29,22 @@ export default function TabLayout() {
             <Pressable
               {...props}
               style={{
-                top: -20,
-                justifyContent: 'center',
-                alignItems: 'center',
+                position: 'absolute',
+                top: -30,
+                alignSelf: 'center',
                 backgroundColor: 'darkgreen',
-                shadowColor: '#fff',
-                shadowOffset: { width: 0.5, height: 0.5 },
-                shadowOpacity: 0.3,
-                shadowRadius: 5,
                 width: 70,
                 height: 70,
                 borderRadius: 35,
-                alignSelf: 'center',
+                justifyContent: 'center',
+                alignItems: 'center',
+                shadowColor: '#D4AF37',
+                shadowOffset: { width: 0, height: 4 },
+                shadowOpacity: 0.6,
+                shadowRadius: 6,
+                elevation: 10,
               }}>
-              <FontAwesome6 name="microphone" size={30} color="white" />
+              <FontAwesome6 name="microphone" size={28} color="#fff" />
             </Pressable>
           ),
         }}
