@@ -1,5 +1,33 @@
-import { View } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
+import Colors from '~/constants/colors';
 
 export default function Options() {
-  return <View></View>;
+  return (
+    <View style={styles.container}>
+      <SafeAreaView
+        style={{ flex: 1, padding: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }}>
+        <View style={styles.headerContainer}>
+          <Text style={styles.title}>Settings</Text>
+        </View>
+      </SafeAreaView>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: Colors.background,
+  },
+  headerContainer: {
+    padding: 20,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: Colors.textPrimary,
+    borderBottomColor: 'gainsboro',
+    borderBottomWidth: 1,
+    paddingBottom: 5,
+  },
+});
