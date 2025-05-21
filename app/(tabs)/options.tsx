@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'NunitoBlackItalic',
     color: Colors.textPrimary,
-    borderBottomColor: 'gainsboro',
+    borderBottomColor: 'lightgray',
     borderBottomWidth: 1,
     paddingBottom: 5,
   },

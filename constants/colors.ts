@@ -2,7 +2,7 @@
 
 const Colors = {
   // Backgrounds
-  background: '#F5F5DC', // Beige
+  background: '#F8EEE2', // Beige
 
   // Text Colors
   textPrimary: '#333333', // Charcoal - main readable text
