@@ -9,10 +9,7 @@
       "output": "static",
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      "expo-font"
-    ],
+    "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true,
       "tsconfigPaths": true
@@ -25,14 +22,13 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.anilyavas.voicebooknotes",
       "infoPlist": {
-        "NSMicrophoneUsageDescription": "VoiceBook Notes needs to access to your microphone to record audio notes."
+        "NSMicrophoneUsageDescription": "VoiceBook Notes needs to access to your microphone to record audio notes.",
+        "speechRecognitionPermission": "CUSTOM: Allow VoiceBook Notes to securely recognize user speech"
       }
     },
     "android": {
@@ -40,9 +36,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "permissions": [
-        "RECORD_AUDIO"
-      ],
+      "permissions": ["RECORD_AUDIO"],
       "package": "com.anilyavas.voicebooknotes"
     }
   }

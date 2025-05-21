@@ -20,6 +20,7 @@ const Colors = {
   // Buttons
   buttonPrimary: '#006400', // Dark Green (matches microphone button)
   buttonShadow: '#D4AF37', // Golden shadow for active buttons
+  buttonSecondary: '#FF5C5C', // Red (matches stop button)
 
   // Utilities
   white: '#FFFFFF',
